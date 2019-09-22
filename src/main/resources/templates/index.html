@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8" />
-<title>Insert title here</title>
+<title th:text="${titulo}"></title>
 </head>
 <body>
-	<h1>Hola spring</h1>
+	<h1 th:text="${titulo}"></h1>
 </body>
+<footer>
+	<ul>
+		<li><a href="/home">home</a></li>
+		<li><a href="/index">index</a></li>
+		<li><a href="/indexmap">Map</a></li>
+		<li><a href="/indexmv">ModelAndView</a></li>
+		<li><a href="/">ModelMap</a></li>
+	</ul>
+</footer>
 </html>
