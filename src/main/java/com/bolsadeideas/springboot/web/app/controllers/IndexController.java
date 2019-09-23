@@ -10,10 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.bolsadeideas.springboot.web.app.models.Usuario;
+
 @Controller
+@RequestMapping("/app")
 public class IndexController {
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = {"/", ""}, method = RequestMethod.GET)
 	public String home(ModelMap model) {
 	
 		model.addAttribute("titulo", "Hola Spring Framework con ModelMap!");
@@ -30,7 +33,7 @@ public class IndexController {
 	@GetMapping({"/home", "/index"})
 	public String index(Model model) {
 	
-		model.addAttribute("titulo", "Hola Spring Framework!");
+		model.addAttribute("titulo", "Hola Spring Framework con Model!");
 		return "index";
 	}
 	
@@ -42,4 +45,17 @@ public class IndexController {
 		return mv;
 	}
 	
+	
+	@RequestMapping("/perfil") 
+	public String perfil(Model model) {
+	
+		Usuario usuario = new Usuario();
+		usuario.setNombre("Javier");
+		usuario.setApellido("Lurquí");
+		
+		model.addAttribute("usuario", usuario);
+		model.addAttribute("titulo", "Perfil de usuario : ".concat(usuario.getNombre()));
+		
+		return "perfil";
+	}
 }
