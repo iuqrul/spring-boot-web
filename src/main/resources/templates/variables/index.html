@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+</head>
+<body>
+	<h1 th:text="${titulo}"></h1>
+
+	<ul>
+		<li><a th:href="@{/variables/string/EsteValor}">/variables/string</a></li>
+		<li><a th:href="@{/variables/mixto/EsteValor/33}">/variables/mixto</a></li>		
+	</ul>
+</body>
+<footer>
+	<ul>
+		<li><a href="/app">App</a></li>
+	</ul>
+</footer>
+</html>
