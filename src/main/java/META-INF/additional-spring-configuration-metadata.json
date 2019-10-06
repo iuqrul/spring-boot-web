@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "index.listar.title",
+    "type": "java.lang.String",
+    "description": "A description for 'index.listar.title'"
+  },
+  {
+    "name": "index.perfil.title",
+    "type": "java.lang.String",
+    "description": "A description for 'index.perfil.title'"
+  },
+  {
+    "name": "index.title.map",
+    "type": "java.lang.String",
+    "description": "A description for 'index.title.map'"
+  },
+  {
+    "name": "index.title.model",
+    "type": "java.lang.String",
+    "description": "A description for 'index.title.model'"
+  },
+  {
+    "name": "index.title.modelmap",
+    "type": "java.lang.String",
+    "description": "A description for 'index.title.modelmap'"
+  }
+]}
